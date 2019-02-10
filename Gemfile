@@ -40,6 +40,8 @@ gem 'bootstrap', '~> 4.2.1'
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
 
+gem 'faker'
+
 group :development, :test do
   gem 'rspec-rails'
   # Strategies for cleaning databases
