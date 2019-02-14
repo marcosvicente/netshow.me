@@ -42,6 +42,7 @@ gem 'devise'
 
 gem 'faker'
 
+gem 'pry-rails'
 group :development, :test do
   gem 'rspec-rails'
   # Strategies for cleaning databases
@@ -50,6 +51,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 4.0'
   # Shoulda Matchers provides RSpec- and Minitest-compatible one-liners that test common Rails functionality. These tests would otherwise be much longer, more complex, and error-prone.
   gem 'shoulda-matchers', '~> 3.1'
+  gem 'rails-controller-testing'
 
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
