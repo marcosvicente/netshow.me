@@ -43,6 +43,7 @@ gem 'devise'
 gem 'faker'
 
 gem 'pry-rails'
+
 group :development, :test do
   gem 'rspec-rails'
   # Strategies for cleaning databases
