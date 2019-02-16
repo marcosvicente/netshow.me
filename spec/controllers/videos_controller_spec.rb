@@ -95,6 +95,8 @@ RSpec.describe VideosController, type: :controller do
       it "updates the requested video" do
         put :update, params: { id: @video.to_param, video: @video_attributes }
         @video.reload
+        @video_new = Video.last
+        expect(@video_new.name).to eq(Video.name)
       end
 
       it "redirects to the video" do
@@ -122,6 +124,20 @@ RSpec.describe VideosController, type: :controller do
       delete :destroy, params: {id: @video.to_param}
       expect(response).to redirect_to(videos_url)
     end
+
   end
+
+  describe 'GET #view' do
+    it 'has update view' do
+      v = @video.view.count 
+
+      get "/videos/#{@video.id}/view"
+
+      @video.view.reload
+
+      expect(@video.view.count).to eq(v + 1)
+    end
+  end
+
 
 end

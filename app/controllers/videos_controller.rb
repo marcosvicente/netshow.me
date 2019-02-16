@@ -1,5 +1,5 @@
 class VideosController < ApplicationController
-  before_action :set_video, only: [:show, :edit, :update, :destroy]
+  before_action :set_video, only: [:show, :edit, :update, :destroy, :view]
 
   # GET /videos
   # GET /videos.json
@@ -10,8 +10,6 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
-    @view = @video.view.count + 1
-    @video.view.update(count: @view) 
   end
 
   # GET /videos/new
@@ -65,6 +63,13 @@ class VideosController < ApplicationController
       format.html { redirect_to videos_url, notice: 'Video was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+
+  # GET /videos/1/view.json
+  def view
+    @view = @video.view.count + 1
+    @video.view.update(count: @view)
   end
 
   private

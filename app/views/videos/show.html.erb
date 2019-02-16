@@ -1,17 +1,26 @@
-<p>
-  <strong>Name:</strong>
-  <%= @video.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <video-js id="vid1" width="1000" height="500" class="vjs-default-skin" controls>
+        <source
+          src="<%= @video.url%>"
+          type="application/x-mpegURL">
+      </video-js>
+    </div>
+  </div>
 
-<p>
-  <strong>Url:</strong>
-  <%= @video.url %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= @video.name %></h1>
+      <p>
+        <%= @video.view.count %>
+        <% if @video.view.count < 1%>
+          Vizualization
+        <% else%>
+          Vizualizations
+        <% end %>
+      </p>
+    </div>
+  </div>
 
-<p>
-  <strong>View:</strong>
-  <%= @video.view.id %>
-</p>
-
-<%= link_to 'Edit', edit_video_path(@video) %> |
-<%= link_to 'Back', videos_path %>
+</div>

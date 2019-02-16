@@ -5,13 +5,23 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video-js.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <p><%= notice %></p>
     <p><%= alert %></p>
     <%= yield %>
-  </body>
+
+    <div id="aa" class="btn btn-large btn-primary">aaa</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video.min.js"></script>
+    <script src="https://unpkg.com/@videojs/http-streaming@1.9.0/dist/videojs-http-streaming.min.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <%= javascript_include_tag 'application' %>
+
+     </body>
 </html>
