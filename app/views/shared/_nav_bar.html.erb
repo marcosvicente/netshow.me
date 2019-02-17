@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag("video.svg", :alt => "logo") %>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "Videos", videos_path, :class => "nav-link" %>  
+        </li>
+
+        <li class="nav-item">
+          <%= link_to "New Video", new_video_path, :class => "nav-link"  %>  
+        </li>
+      </ul>
+      <ul class="navbar-nav right">
+        <li class="nav-item dropdown left">
+          <a class="nav-link dropdown-toggle left" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Login
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <% if user_signed_in? %>
+              <%= link_to('Logout', destroy_user_session_path, method: :delete, :class => "dropdown-item") %>        
+              <div class="dropdown-divider"></div>
+              <%= link_to('Edit registration', edit_user_registration_path,  :class => "dropdown-item") %>
+            <% else %>
+              <%= link_to('Login', new_user_session_path, :class =>"dropdown-item")  %>  
+              <div class="dropdown-divider"></div>
+              <%= link_to('Login', new_user_registration_path, :class =>"dropdown-item")  %>  
+            <% end %>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
