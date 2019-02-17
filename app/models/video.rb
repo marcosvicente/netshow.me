@@ -5,6 +5,7 @@ class Video < ApplicationRecord
 
   validate :type_of_video
 
+  paginates_per 10
 
   def type_of_video
     if url.split('.').last != 'm3u8' 

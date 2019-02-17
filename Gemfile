@@ -44,6 +44,8 @@ gem 'faker'
 
 gem 'pry-rails'
 
+gem 'kaminari'
+
 group :development, :test do
   gem 'rspec-rails'
   # Strategies for cleaning databases

@@ -4,22 +4,26 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.all
+    @page_title = 'All videos'
+    @videos = Video.order(:name).page(params[:page])
   end
 
   # GET /videos/1
   # GET /videos/1.json
   def show
+    @page_title = "Watch video - #{@video.name}"
   end
 
   # GET /videos/new
   def new
+    @page_title = 'Create a new video'
     @video = Video.new
     @view = 0
   end
 
   # GET /videos/1/edit
   def edit
+    @page_title = "Edit video - #{@video.name}"
     @view = @video.view.id
   end
 
