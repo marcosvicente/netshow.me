@@ -6,7 +6,7 @@ play_button.onclick = function() { updateVideoView()};
 
 function updateVideoView() {
   var value = document.getElementById("show-id-value").value;
-  axios.get('http://localhost:3000/videos/'+ value +'/view')
+  axios.get('https://netshowme0002231.herokuapp.com/videos/'+ value +'/view')
     .then(function (response) {
       console.log("ok!")
       console.log(response);
