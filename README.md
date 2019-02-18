@@ -10,6 +10,8 @@
   - run `rails db:create && rails db:migrate && rails db:seed`
   - run `rails spec`
 
+# url site
+  - https://netshowme0002231.herokuapp.com/videos
 # contact me
   - whatsapp 15 99709-9138
   - email marcosvicentesiqueira@gmail.com
