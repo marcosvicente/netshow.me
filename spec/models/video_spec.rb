@@ -24,6 +24,7 @@ RSpec.describe Video, type: :model do
     before { allow(subject).to receive(:type_of_video).and_return(false) }
 
     it { is_expected.to belong_to(:view) }
+    it { is_expected.to belong_to(:user) }
 
     it { is_expected.to validate_presence_of(:name).on(:create) }
     it { is_expected.to validate_presence_of(:url).on(:create)}

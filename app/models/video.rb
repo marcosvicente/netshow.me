@@ -1,5 +1,6 @@
 class Video < ApplicationRecord
   belongs_to :view
+  belongs_to :user
 
   validates_presence_of :name, :url
 

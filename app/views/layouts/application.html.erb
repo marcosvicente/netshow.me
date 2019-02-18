@@ -12,15 +12,9 @@
   <body>
 
     <% flash.each do |key, value| %>
-      <div class="message">
-        
-      </div>
-      <div class="alert alert-error" role="alert">
-        <%= alert %>
-      </div>
-
-      <div class="alert alert-success" role="alert">
+      <div class="alert alert-light" role="alert">
         <%= notice %>
+        <%= alert %>
       </div>
     <% end %>
 

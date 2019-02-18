@@ -3,5 +3,6 @@ FactoryBot.define do
     name { Faker::Movie.quote }
     url { 'music.m3u8' }
     view 
+    user
   end
 end

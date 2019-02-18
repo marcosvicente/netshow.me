@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.feature "Video #edit", type: :feature do
   describe "User create a new video" do
     before(:each) do
-      @user = create(:user)
-      login_as(@user, :scope => :user, :run_callbacks => false)
 
       @video = create(:video)
+      login_as(@video.user, :scope => :user, :run_callbacks => false)
+
     end
 
     it "when have valid attributes" do
