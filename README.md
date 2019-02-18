@@ -1,24 +1,15 @@
-# README
+# Netshow.me challenger
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# run project
+  - put your configuration of database(postgresql) in config/database.yml
+  - run `rails db:create && rails db:migrate && rails db:seed`
+  - for make login, use the email(user1@email.com) with password(initial123)
 
-Things you may want to cover:
+# run test
+  - put your configuration of database(postgresql) in config/database.yml
+  - run `rails db:create && rails db:migrate && rails db:seed`
+  - run `rails spec`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# contact me
+  - whatsapp 15 99709-9138
+  - email marcosvicentesiqueira@gmail.com
